@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700,900");
+.smile-rating-container {
+  position: relative;
+  height: 10%;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  top: 20%;
+  right: 50%;
+}
+
+.submit-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.rating-label {
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+  flex: 0.34;
+  z-index: 3;
+  font-weight: bold;
+  cursor: pointer;
+  color: #222;
+  transition: 500ms;
+}
+
+.rating-label:hover,
+.rating-label:active {
+  color: #d0cccd;
+}
+
+.rating-label-fun {
+  right: 32px;
+}
+
+.rating-label-meh {
+  left: 32px;
+  color: #222;
+}
+
+.smile-rating-container input {
+  display: none;
+}
+
+.toggle-rating-pill {
+  position: relative;
+  height: 27px;
+  width: 75px;
+  background: #d0cccd;
+  border-radius: 500px;
+  transition: all 500ms;
+  border: 2px solid #fff;
+}
+
+.smile-rating-toggle {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  background-color: white;
+  left: 182px;
+  border-radius: 500px;
+  transition: all 500ms;
+  z-index: 4;
+}
+
+.mouth {
+  position: absolute;
+  border: 3px solid rgb(187, 60, 45);
+  width: 39px;
+  height: 20px;
+  border-radius: 500px;
+  left: 27px;
+  top: 2px;
+  z-index: 999;
+  transition: 0.5s;
+}
+
+/*
+Toggle Changes
+*/
+#meh:checked ~ .rating-label-meh {
+  color: rgb(187, 60, 45);
+}
+
+#fun:checked ~ .mouth {
+  left: 59px;
+  transform: rotateX(180deg);
+}
+
+#fun:checked ~ .rating-label-fun {
+  color: rgb(187, 60, 45);
+}
+
+@media only screen and (max-width: 524px) {
+  .normal-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .smile-rating-container {
+    position: relative;
+    height: 10%;
+    width: 490px;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    top: 20%;
+  }
+  .submit-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rating-label {
+    position: relative;
+    font-size: 1.6em;
+    text-align: center;
+    flex: 0.34;
+    z-index: 3;
+    font-weight: bold;
+    cursor: pointer;
+    color: #d0cccd;
+    transition: 500ms;
+  }
+  .rating-label:hover,
+.rating-label:active {
+    color: #d0cccd;
+  }
+  .rating-label-fun {
+    left: -58px;
+    text-align: right;
+  }
+  .rating-label-meh {
+    left: 50px;
+    text-align: left;
+    color: #222;
+  }
+  .smile-rating-container input {
+    display: none;
+  }
+  .toggle-rating-pill {
+    position: relative;
+    height: 65px;
+    width: 165px;
+    background: #d0cccd;
+    border-radius: 500px;
+    transition: all 500ms;
+  }
+  .smile-rating-toggle {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    background-color: white;
+    left: 168px;
+    border-radius: 500px;
+    transition: all 500ms;
+    z-index: 4;
+  }
+  .rating-eye {
+    position: absolute;
+    height: 12px;
+    width: 8px;
+    background: #d0cccd;
+    border-radius: 500px;
+    top: 22px;
+    z-index: 5;
+    transition: all 440ms;
+  }
+  .rating-eye-left {
+    left: 180px;
+  }
+  .rating-eye-right {
+    left: 201px;
+  }
+  .mouth {
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    z-index: 6;
+    border: 4px solid #d0cccd;
+    border-radius: 10%;
+    border-bottom-color: rgba(1, 1, 1, 0);
+    border-right-color: rgba(1, 1, 1, 0);
+    border-left-color: rgba(1, 1, 1, 0);
+    top: 42px;
+    left: 177px;
+    transition: all 500ms;
+  }
+  /*
+  Toggle Changes
+  */
+  #meh:checked ~ .rating-label-meh {
+    color: rgb(187, 60, 45);
+  }
+  #fun:checked ~ .rating-label-meh {
+    color: #d0cccd;
+  }
+  #fun:checked ~ .mouth {
+    border: 4px solid #00b9ee;
+    border-bottom-color: rgba(1, 1, 1, 0);
+    border-right-color: rgba(1, 1, 1, 0);
+    border-left-color: rgba(1, 1, 1, 0);
+    top: 23px;
+    left: 275px;
+    transform: rotateX(180deg);
+    border-radius: 100%;
+  }
+  #fun:checked ~ .rating-label-fun {
+    color: #555e63;
+  }
+  #fun:checked ~ .smile-rating-toggle {
+    left: 266px;
+  }
+  #fun:checked ~ .rating-eye-left {
+    left: 275px;
+  }
+  #fun:checked ~ .rating-eye-right {
+    left: 300px;
+  }
+  #fun:checked ~ .toggle-rating-pill {
+    background-color: #00b9ee;
+  }
+  #fun:checked ~ .rating-eye {
+    background-color: #00b9ee;
+  }
+}/*# sourceMappingURL=stye.css.map */
